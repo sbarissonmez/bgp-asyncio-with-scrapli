@@ -1,14 +1,10 @@
-"""
-Author: IPvZero
-Simple async config test
-"""
 import os
 import asyncio
 import yaml
 from jinja2 import Environment, FileSystemLoader
 from scrapli.driver.core import AsyncIOSXEDriver
 from rich import print as rprint
-from inv import DEVICES
+from inventory import DEVICES
 
 username = os.environ["USERNAME"]
 password = os.environ["PASSWORD"]
