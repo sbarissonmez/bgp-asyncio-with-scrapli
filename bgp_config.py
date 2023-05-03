@@ -12,8 +12,8 @@ password = os.environ["PASSWORD"]
 
 def generate_config(device):
     """
-    Load yaml from host vars for each device in list.
-    Render config via jinja2
+    This line of code loads YAML configuration data for each device in a list from the corresponding host variables file.
+    Render configuration using the jinja2 template engine.
     """
     hostname = device["hostname"]
     config_data = yaml.safe_load(open(f"host_vars/{hostname}.yaml"))
@@ -27,7 +27,7 @@ def generate_config(device):
 
 async def push_config(device):
     """
-    Coroutine to open connection and push config
+    This refers to a coroutine that establishes a connection and sends configuration to a device.
     """
     async with AsyncIOSXEDriver(
         host=device["host"],
@@ -44,7 +44,7 @@ async def push_config(device):
 
 async def main():
     """
-    Main coroutine
+    The primary coroutine.
     """
     coroutines = [push_config(device) for device in DEVICES]
     results = await asyncio.gather(*coroutines)
