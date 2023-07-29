@@ -1,4 +1,4 @@
-# BGP Zero-Tourch with Scrapli Asyncio
+# BGP Zero-Touch with Scrapli Asyncio
  
 Scrapli has the capability to support asynchronous-based programming in Python, also known as Python AsyncIO, by offering alternative async drivers and functions that enable the creation of Scrapli AsyncIO-based scripts.
 
